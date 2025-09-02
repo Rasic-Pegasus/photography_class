@@ -1,0 +1,192 @@
+
+/* 2 Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+	content: none;
+}
+table {
+  border-collapse: collapse;
+	border-spacing: 0;
+}
+
+em {
+  font-weight: 500;
+} */ 
+
+
+@import "tailwindcss";
+
+
+/*=====================================
+    BODY HTML CSS DECALARATIONS
+=====================================*/
+/****************GOOD TO HAVES*****************/
+
+
+:root {
+    --color-primary: #FF7C10;
+    --color-secondary: #999;
+    --color-white:#ffffff;
+    --allbodybg-color:#FCF3EC;
+ 
+    /* --bg-primary: #322d2d; */
+    /* --bg-secondary: #ee9b9b;   */
+
+
+     /* Overpass is the primary font-family */
+    --font-primary: "Overpass", sans-serif;
+ 
+      
+     /* Roboto is the secondary font-family */
+    --font-secondary: "Roboto", sans-serif;
+
+    --text-primary: #333333;
+    --text-seondary: #FF7C10;       
+    --text-white:#ffffff;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    color: var(--text-primary);
+
+  }
+
+  
+  body h1, body h2, body h3, body h4, body h6, body h6 {
+     font-family: var(--font-primary);
+      line-height: 1.3;
+  }
+ 
+    body h1 {
+      font-weight: bold;
+      letter-spacing: -4%;
+      font-size: 3.75rem;
+      margin-bottom: 2rem;
+
+    }
+    
+  
+  body h2 {  
+      font-weight: bold;
+      letter-spacing: -4%;
+      font-size: 3rem; 
+  }
+
+    body h3 {  
+      font-weight: bold;
+      line-height: 24px;
+      letter-spacing: -3%;
+      font-size: 1rem; 
+  }
+  
+
+    body li, body button{
+    /* font-size: 1rem;
+    line-height: 1.5;
+    font-family: var(--font-secondary);
+    font-weight: 400; */
+  }
+  
+  body em {
+    font-weight: 700;
+  }
+
+  body small {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-family: var(--font-secondary);
+    cursor: pointer;
+  }
+
+   img {
+      vertical-align: top;
+    }
+   
+  
+  .btn_main, .btn_secondary {
+    padding: 20px 30px;
+    border-radius: 5px;
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    background: var(--color-primary);
+    font-weight: 700;
+    border: none;
+    letter-spacing: 0.125rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    line-height: 1;
+     
+  }
+
+
+  .btn_secondary {
+    background: var(--color-white);
+    border: 1px solid #808080;
+    color: var(--text-primary);
+  }
+
+
+  .btn_main:hover,.btn_secondary:hover {
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+  }
+  
+
+  /* .width_90{
+    width: 1400px;
+    margin: 0 auto;
+  } */
+
+
+
+ 
+ 
+
