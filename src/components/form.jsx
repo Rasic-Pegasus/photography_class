@@ -70,7 +70,7 @@ const Form = ({title}) => {
                 value={firstname}
                 onChange={(e) => setFirstname(e.target.value)}
                 required
-                className="border p-3 rounded outline-none focus:border-[var(--color-primary)]"
+                className="border p-3 rounded outline-none focus:border-[var(--color-primary)] bg-[var(--color-white)]"
               />
               <input
                 type="text"
@@ -79,7 +79,7 @@ const Form = ({title}) => {
                 value={lastname}
                 onChange={(e) => setLastname(e.target.value)}
                 required
-                className="border p-3 rounded outline-none focus:border-[var(--color-primary)]"
+                className="border p-3 rounded outline-none focus:border-[var(--color-primary)] bg-[var(--color-white)]"
               />
             </div>
 
@@ -91,7 +91,7 @@ const Form = ({title}) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="border p-3 rounded outline-none focus:border-[var(--color-primary)]"
+                className="border p-3 rounded outline-none focus:border-[var(--color-primary)] bg-[var(--color-white)]"
               />
               <input
                 type="tel"
@@ -100,7 +100,7 @@ const Form = ({title}) => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
-                className="border p-3 rounded outline-none focus:border-[var(--color-primary)]"
+                className="border p-3 rounded outline-none focus:border-[var(--color-primary)] bg-[var(--color-white)]"
               />
             </div>
 
@@ -110,7 +110,7 @@ const Form = ({title}) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required
-              className="border p-3 rounded w-full mt-4 outline-none focus:border-[var(--color-primary)]"
+              className="border p-3 rounded w-full mt-4 outline-none focus:border-[var(--color-primary)] bg-[var(--color-white)]"
               rows="4"
             />
 

@@ -26,7 +26,7 @@ const Location = ({ Locationhead }) => {
       {/* Location Cards */}
       {locationData.map((location, index) => (
         <div
-          className="bg-[#FCF3EC] px-8 sm:px-16 pt-8 sm:pt-16 pb-8 sm:pb-10 rounded-4xl border border-[var(--color-primary)] mb-25"
+          className="px-8 sm:px-16 pt-8 sm:pt-16 pb-8 sm:pb-10 rounded-4xl border border-[var(--color-primary)] mb-25"
           key={index}
         >
           <img
@@ -42,7 +42,7 @@ const Location = ({ Locationhead }) => {
 
             <a
               href="https://www.google.com/maps/@27.7247547,85.3208659,3992m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
-              className="font-bold"
+              className="font-bold hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >

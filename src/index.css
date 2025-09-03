@@ -129,8 +129,7 @@ body h3 {
 }
 
 
-body li,
-body button {
+body li, body button {
   /* font-size: 1rem;
     line-height: 1.5;
     font-family: var(--font-secondary);
