@@ -77,7 +77,7 @@ const Carousel = () => {
 
 
                             {/* Left Side - Image */}
-                            <div className="bg-red-500 rounded-2xl">
+                            <div className="bg-[var(--color-primary)] rounded-2xl">
                                 <img
                                     src={item.carouseTeamPhoto}
                                     alt={item.carouseTeamName}
@@ -99,16 +99,9 @@ const Carousel = () => {
                                 </h6>
                                 <p className="text-gray-500 text-sm">{item.carouseTeamPost}</p>
 
-                  
-
-
-
                             </div>
 
-
-
                         </div>
-
 
                     </SwiperSlide>
                 ))}

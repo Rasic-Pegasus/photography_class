@@ -10,8 +10,8 @@ const locationData = [
   },
 ];
 
-const Location = ({ Locationhead}) => {
-  
+const Location = ({ Locationhead }) => {
+
 
   return (
     <div className="location mt-[100px]">
@@ -21,7 +21,7 @@ const Location = ({ Locationhead}) => {
         {Locationhead}
       </h2>
 
-    
+
 
       {/* Location Cards */}
       {locationData.map((location, index) => (
@@ -39,12 +39,18 @@ const Location = ({ Locationhead}) => {
             <p className="italic font-bold">
               {location.eventLocation}
             </p>
-            <button
-              className="font-medium"
-              type="button"
+
+            <a
+              href="https://www.google.com/maps/@27.7247547,85.3208659,3992m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
+              className="font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {location.book}
-            </button>
+            </a>
+
+
+
           </div>
 
 

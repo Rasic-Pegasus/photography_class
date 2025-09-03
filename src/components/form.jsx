@@ -3,7 +3,8 @@ import emailjs from "emailjs-com";
 
 import formimage from "../assets/images/fbi.png";
 
-const Form = () => {
+const Form = ({title}) => {
+
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -24,8 +25,8 @@ const Form = () => {
         "service_ys2onepage", // replace with your EmailJS service ID
         "template_y610agb", // replace with your EmailJS template ID
         {
-          firstName: firstname,
-          lastName: lastname,
+          firstname: firstname,
+          lastname: lastname,
           email: email,
           phone: phone,
           description: description,
@@ -54,12 +55,13 @@ const Form = () => {
   };
 
   return (
-    <div className="mt-[100px]">
-      <h2>Register for Pre-Booking</h2>
+    <div className="mt-[100px] mb-[100px]">
+      {/* <h2 className="mb-6">{title}</h2> */}
 
-      <div className="bg-white flex items-center justify-between gap-20">
+      <div className="flex items-center justify-between gap-20">
         <div className="w-[700px]">
           <form onSubmit={handleSubmit} className="">
+             <h2 className="mb-6">{title}</h2>
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
@@ -113,14 +115,14 @@ const Form = () => {
             />
 
             <div className="flex gap-4 mt-6">
-              <button type="submit" className="btn_main w-full">
+              <button type="submit" className="btn_main w-full capitalize">
                 Register now
               </button>
 
               <button
                 type="button"
                 onClick={handleViewTickets}
-                className="btn_secondary w-full"
+                className="btn_secondary w-full capitalize"
               >
                 View Tickets
               </button>
@@ -129,7 +131,7 @@ const Form = () => {
         </div>
 
         <div className="w-[600px]">
-          <img className="object-cover" src={formimage} alt="" />
+          <img className="object-cover rounded-xs" src={formimage} alt="" />
         </div>
       </div>
     </div>
