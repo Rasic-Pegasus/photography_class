@@ -44,7 +44,7 @@ const portfolioDetail = [
 
 const Portfolio = () => {
   return (
-    <div className="text-center items-center mb-30">
+    <div className="text-center items-center mb-40">
       {portfolioDetail.map((folio, index) => (
         <div key={index}>
           {/* Section title */}

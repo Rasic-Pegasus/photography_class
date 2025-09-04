@@ -26,7 +26,7 @@ const Location = ({ Locationhead }) => {
       {/* Location Cards */}
       {locationData.map((location, index) => (
         <div
-          className="px-8 sm:px-16 pt-8 sm:pt-16 pb-8 sm:pb-10 rounded-4xl border border-[var(--color-primary)] mb-25"
+          className="bg-[var(--color-bglocation)] px-8 sm:px-16 pt-8 sm:pt-16 pb-8 sm:pb-10 rounded-4xl border border-[var(--color-primary)] mb-25 "
           key={index}
         >
           <img

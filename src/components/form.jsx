@@ -3,7 +3,19 @@ import emailjs from "emailjs-com";
 
 import formimage from "../assets/images/fbi.png";
 
-const Form = ({title}) => {
+
+const Form = ({ title, formRef, ticketcardRef }) => { // Receive formRef as prop
+
+  const scrollToBuycard = () => {
+    ticketcardRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+  };
+
+  // this above  scrollToBuycard for "BUY NOW" ticket up scrolling
+
 
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -50,18 +62,18 @@ const Form = ({title}) => {
       );
   };
 
-  const handleViewTickets = () => {
-    alert("View Tickets Clicked");
-  };
+  // const handleViewTickets = () => {
+  //   alert("View Tickets Clicked");
+  // };
 
   return (
-    <div className="mt-[100px] mb-[100px]">
-      {/* <h2 className="mb-6">{title}</h2> */}
+    <div ref={formRef} className="mt-[100px] mb-[100px]"> {/* Attach ref here and fix the className */}
 
+      {/* <h2 className="mb-6">{title}</h2> */}
       <div className="flex items-center justify-between gap-20">
         <div className="w-[700px]">
           <form onSubmit={handleSubmit} className="">
-             <h2 className="mb-6">{title}</h2>
+            <h2 className="mb-6">{title}</h2>
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
@@ -119,19 +131,22 @@ const Form = ({title}) => {
                 Register now
               </button>
 
+
               <button
                 type="button"
-                onClick={handleViewTickets}
+                onClick={scrollToBuycard}
                 className="btn_secondary w-full capitalize"
               >
                 View Tickets
               </button>
+
+
             </div>
           </form>
         </div>
 
-        <div className="w-[600px]">
-          <img className="object-cover rounded-xs" src={formimage} alt="" />
+        <div>
+          <img className="w-[600px] h-[500px] object-cover rounded-xs" src={formimage} alt="" />
         </div>
       </div>
     </div>

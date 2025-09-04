@@ -132,13 +132,13 @@ const ScheduleArray = [
   },
 ];
 
-const Schedule = () => {
+const Schedule = ({scheduleRef}) => {  //Receive formRef as prop from app.jsx
   const [activeCircle, setActiveCircle] = useState("firstCircle"); // default active circle is firstCircle.
 
   // console.log(activeCircle);
 
   return (
-    <div className="mb-30">
+    <div ref={scheduleRef} className="mb-30">
       {ScheduleArray.map((item, index) => (
         <div key={index}>
           <h2 className="mb-16">{item.title}</h2>

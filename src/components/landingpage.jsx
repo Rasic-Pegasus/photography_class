@@ -1,3 +1,4 @@
+// import { useRef } from "react";
 import landingphoto from "../assets/images/landingImage.png";
 
 import { FaRegCircle } from "react-icons/fa";
@@ -5,7 +6,26 @@ import { PiTriangleBold } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
 
 
-const LandingPage = () => {
+const LandingPage = ({ formRef, scheduleRef}) => { // Receive formRef as prop
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+  };
+
+    const scheduleToList = () => {
+    scheduleRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+  };
+ 
+
+
   const landingDetail = [
     {
       photo: landingphoto,
@@ -40,14 +60,18 @@ const LandingPage = () => {
     },
   ];
 
+
+
+
+
   return (
-    <div className="landing mb-30">
-      <div className="landing_wrapper pt-6">
+    <div className="landing mb-30  ">
+      <div className="landing_wrapper  ">
 
 
         {landingDetail.map((landing, index) => (
 
-          <div className="flex items-center gap-[89px]" key={index}>
+          <div className="flex items-center gap-[89px] h-screen" key={index}>
 
             <img className="rounded-[120px] w-[553px] h-[780px] object-cover " src={landing.photo} alt={landing.title} />
 
@@ -61,8 +85,13 @@ const LandingPage = () => {
 
 
               <div className="flex mt-15 mb-15 gap-8">
-                <button className="btn_main">{landing.btnPRM}</button>
-                <button className="btn_secondary">{landing.btnSCY}</button>
+
+                <button onClick={scrollToForm} className="btn_main">{landing.btnPRM}</button>
+
+                <button onClick={scheduleToList} className="btn_secondary">{landing.btnSCY}</button>
+
+
+
               </div>
 
 

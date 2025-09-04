@@ -14,7 +14,7 @@
 /* Shared button styles */
 .custom-swiper-button-next,
 .custom-swiper-button-prev {
-  background: var(--bg-primary);
+ 
   border-radius: 20%;
   border: 1px solid #ccc;
   width: 40px;
@@ -29,7 +29,8 @@
   color: var(--text-primary);
   position: static;  
   transform: none;
-  background-color: #f4d2b7;  
+  background-color: var(--color-bglocation);  
+  
  
    
 }

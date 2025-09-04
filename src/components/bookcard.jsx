@@ -26,6 +26,9 @@ const Bookticket = () => {
    
   return (
     <>
+  
+
+ 
       {bookDetail.map((ticket, index) => (
 
         <div className="w-[450px] p-10 border border-[var(--color-primary)] rounded-tr-4xl rounded-bl-4xl bg-[#FCF3EC] " key={index}>
