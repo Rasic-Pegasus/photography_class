@@ -31,7 +31,7 @@ const Bookticket = () => {
  
       {bookDetail.map((ticket, index) => (
 
-        <div className="w-[450px] p-10 border border-[var(--color-primary)] rounded-tr-4xl rounded-bl-4xl bg-[#FCF3EC] " key={index}>
+        <div className="w-[450px] p-10 max-md:p-8 max-sm:p-5 border border-[var(--color-primary)] rounded-tr-4xl rounded-bl-4xl bg-[#FCF3EC] max-[500px]:w-full" key={index}>
 
 
           <div className="flex justify-end pb-5">
@@ -40,14 +40,14 @@ const Bookticket = () => {
 
 
           <h3>{ticket.day}</h3>
-          <h2 className="pb-18">{ticket.price}</h2>
+          <h2 className="pb-18 max-sm:pb-8 max-md:pb-8">{ticket.price}</h2>
 
           <p className="pb-2">{ticket.date}</p>
           <p className="pb-2">{ticket.location}</p>
           <p>{ticket.organiser}</p>
 
 
-          <div className="flex mt-14 mb-7 gap-2">
+          <div className="flex mt-14 mb-7 gap-2 max-sm:mt-8">
             <p>{ticket.phone}</p>
             <p>{ticket.mail}</p>
           </div>
@@ -63,7 +63,8 @@ const Bookticket = () => {
             {ticket.payment.map((method, i) => (
               <img
                 key={i}
-                className=" w-[100px] h-[40px]"
+                className=" w-[100px] max-sm:w-[80px] h-[40px]"
+                
                 src={method.logo}
                 alt={method.name}
               />

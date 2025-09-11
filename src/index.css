@@ -51,7 +51,6 @@ em {
 } */
 
 
-@import "tailwindcss";
 
 
 /*=====================================
@@ -66,14 +65,11 @@ em {
   --color-white: #ffffff;
   --allbodybg-color: #FCF3EC;
   --color-bglocation: #fee5d0;
-
   /* --bg-primary: #322d2d; */
   /* --bg-secondary: #ee9b9b;   */
 
-
   /* Overpass is the primary font-family */
   --font-primary: "Overpass", sans-serif;
-
 
   /* Roboto is the secondary font-family */
   --font-secondary: "Roboto", sans-serif;
@@ -129,13 +125,46 @@ body h3 {
   font-size: 1rem;
 }
 
+ @media(max-width:1280px) {
 
-body li, body button {
-  /* font-size: 1rem;
-    line-height: 1.5;
-    font-family: var(--font-secondary);
-    font-weight: 400; */
+body h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
+body h2 {
+  font-size: 2.8rem;
+}
+
+}
+
+ @media(max-width:768px) {
+
+body h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+body h2 {
+  font-size: 2.8rem;
+}
+
+}
+
+
+@media(max-width:640px) {
+
+body h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+body h2 {
+  font-size: 1.8rem;
+}
+
+}
+
+
+ 
+
 
 body em {
   font-weight: 700;
@@ -155,6 +184,7 @@ img {
 }
 
 
+
 .btn_main,
 .btn_secondary {
   padding: 20px 30px;
@@ -169,7 +199,6 @@ img {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   line-height: 1;
-
 }
 
 
@@ -180,11 +209,35 @@ img {
 }
 
 
+
 .btn_main:hover,
 .btn_secondary:hover {
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
 }
+
+@media(max-width:1280px) {
+.btn_main, .btn_secondary {
+  padding: 20px 20px;
+  font-size: 12px
+}
+
+
+}
+
+
+
+@media(max-width:500px) {
+.btn_main, .btn_secondary {
+  padding: 15px 15px;
+  font-size: 12px
+}
+
+
+}
+
+
+
  
  
 
@@ -194,3 +247,7 @@ img {
     width: 1400px;
     margin: 0 auto;
   } */
+
+
+  
+@import "tailwindcss";

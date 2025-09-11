@@ -8,14 +8,14 @@ import gfive from "../assets/images/grid5.png";
 
 
 
-import {BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 
 import { BsQuote } from "react-icons/bs";
 
 
 // Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";   
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -63,37 +63,47 @@ const Carousel = () => {
     return (
         <div className="carousel relative">
             <Swiper
-                modules={[Navigation]}   
+                modules={[Navigation, Autoplay]}
                 slidesPerView={1}
                 loop={true}
                 navigation={{
                     nextEl: ".custom-swiper-button-next",
                     prevEl: ".custom-swiper-button-prev",
                 }}
+                autoplay={{
+                    delay: 3000, // 3 seconds
+                    disableOnInteraction: false, // keeps autoplay after user swipes
+                    pauseOnMouseEnter: true, // optional: pause when hover
+                }}
             >
                 {carouseList.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <div className="flex flex-col md:flex-row items-center gap-10 p-6">
+                        <div className="flex items-center gap-10 p-6 max-sm:p-0 max-md:p-0 max-lg:p-0 max-sm:flex-col max-md:flex-col max-lg:flex-col">
 
 
                             {/* Left Side - Image */}
-                            <div className="bg-[var(--color-primary)] rounded-2xl">
+                            <div className="bg-[var(--color-primary)] max-sm:bg-transparent max-md:bg-transparent max-lg:bg-transparent rounded-2xl w-full">
                                 <img
                                     src={item.carouseTeamPhoto}
                                     alt={item.carouseTeamName}
-                                    className="w-[300px] h-[350px] object-cover rounded-2xl"
+                                    className="w-[300px] h-[350px] max-sm:h-[300px] object-cover rounded-2xl max-sm:w-[300px] max-sm:object-fill"
                                 />
                             </div>
 
                             {/* Right Side - Quote & Text */}
-                            <div className="flex-1">
+                            <div>
+                              
+
+                               
                                 <BsQuote className="text-[50px] text-blue-500 mb-4" />
 
                                 <p className="text-lg uppercase font-bold mb-6">
                                     {item.carouseTitle}
                                 </p>
 
- 
+                               
+
+
                                 <h6 className="font-extrabold text-base uppercase">
                                     {item.carouseTeamName}
                                 </h6>
@@ -108,15 +118,15 @@ const Carousel = () => {
 
 
 
-                    {/* Custom Navigation Arrows inside Swiper */}
-                    <div className="custom-swiper-buttons-wrapper">
-                        <button className="custom-swiper-button-prev">
-                            <BiLeftArrowAlt size={24} />
-                        </button>
-                        <button className="custom-swiper-button-next">
-                            <BiRightArrowAlt size={24} />
-                        </button>
-                    </div>
+                {/* Custom Navigation Arrows inside Swiper */}
+                <div className="custom-swiper-buttons-wrapper">
+                    <button className="custom-swiper-button-prev">
+                        <BiLeftArrowAlt size={24} />
+                    </button>
+                    <button className="custom-swiper-button-next">
+                        <BiRightArrowAlt size={24} />
+                    </button>
+                </div>
             </Swiper>
 
 

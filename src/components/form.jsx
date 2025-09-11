@@ -67,14 +67,14 @@ const Form = ({ title, formRef, ticketcardRef }) => { // Receive formRef as prop
   // };
 
   return (
-    <div ref={formRef} className="mt-[100px] mb-[100px]"> {/* Attach ref here and fix the className */}
+    <div ref={formRef} className="mt-[100px] mb-[100px] "> {/* Attach ref here and fix the className */}
 
       {/* <h2 className="mb-6">{title}</h2> */}
-      <div className="flex items-center justify-between gap-20">
-        <div className="w-[700px]">
-          <form onSubmit={handleSubmit} className="">
+      <div className="flex items-center justify-between gap-20 max-sm:flex-col max-md:flex-col max-lg:flex-col">
+        <div className="w-[60%] max-sm:w-full max-md:w-[80%] max-lg:w-[90%]">
+          <form onSubmit={handleSubmit}>
             <h2 className="mb-6">{title}</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 ">
               <input
                 type="text"
                 name="firstName"
@@ -146,7 +146,9 @@ const Form = ({ title, formRef, ticketcardRef }) => { // Receive formRef as prop
         </div>
 
         <div>
-          <img className="w-[600px] h-[500px] object-cover rounded-xs" src={formimage} alt="" />
+          <img className="w-[600px] h-[500px] object-cover rounded-xs max-sm:object-none max-sm:hidden max-lg:w-full" src={formimage} alt="booking form image..." 
+        
+          />
         </div>
       </div>
     </div>

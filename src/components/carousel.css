@@ -43,3 +43,33 @@
   background: var(--color-primary);
   color: white;
 }
+
+@media (max-width: 768px) {
+  .custom-swiper-buttons-wrapper{
+    bottom: 5%;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+  .custom-swiper-buttons-wrapper {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    padding-top: 20px;
+    margin-top: 10px;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .custom-swiper-buttons-wrapper {
+    bottom: 10%;
+
+  
+  }
+}

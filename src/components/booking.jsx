@@ -29,7 +29,7 @@ const Booking = () => {
     ];
 
     return (
-        <div className='w-[700px]'>
+        <div className='w-[64%] max-sm:w-[100%] max-md:w-full max-lg:w-[80%] max-xl:w-[100%] max-2xl:w-[80%]'>
 
             {bookSeat.map((book, index) => (
                 <div key={index} className="booking-card">

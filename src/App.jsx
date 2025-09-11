@@ -29,9 +29,10 @@ function App() {
 
 
   return (
-    <div className='bg-[var(--allbodybg-color)]'>
-      <div className='max-w-[1400px] mx-auto'>
+    <div className='bg-[var(--allbodybg-color)] '>
+      <div className='max-w-[1400px] mx-auto max-sm:max-w-[95%] max-md:max-w-[95%] max-lg:max-w-[95%] max-xl:max-w-[95%] max-2xl:max-w-[95%]'>
 
+       
 
 
         <LandingPage formRef={formRef} scheduleRef={scheduleRef} /> {/* Pass ref to LandingPage */}
@@ -46,8 +47,8 @@ function App() {
 
 
 
-        <div ref={ticketcardRef} className='flex gap-20 items-center justify-between'>
-          <div>
+        <div ref={ticketcardRef} className='flex gap-20 max-lg:gap-10 items-center justify-between max-sm:flex-col max-md:flex-col max-lg:flex-col'>
+          <div  >
             <Booking />
           </div>
 
@@ -61,10 +62,17 @@ function App() {
 
 
         {/* Location Section */}
-        <Location
+        <div>
+            <Location 
           Locationhead="Location"
+        
         />
 
+
+        </div>
+
+
+      
 
         <Carousel />
 
