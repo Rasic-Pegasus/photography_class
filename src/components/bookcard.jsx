@@ -31,7 +31,7 @@ const Bookticket = () => {
  
       {bookDetail.map((ticket, index) => (
 
-        <div className="w-[450px] p-10 max-md:p-8 max-sm:p-5 border border-[var(--color-primary)] rounded-tr-4xl rounded-bl-4xl bg-[#FCF3EC] max-[500px]:w-full" key={index}>
+        <div className="card w-[450px] p-10 max-md:p-8 max-sm:p-5 border border-[var(--color-primary)] rounded-tr-4xl rounded-bl-4xl bg-[var(--bgbook-card)] max-[500px]:w-full" key={index}>
 
 
           <div className="flex justify-end pb-5">

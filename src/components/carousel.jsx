@@ -107,7 +107,7 @@ const Carousel = () => {
                                 <h6 className="font-extrabold text-base uppercase">
                                     {item.carouseTeamName}
                                 </h6>
-                                <p className="text-gray-500 text-sm">{item.carouseTeamPost}</p>
+                                <p className="text-[var(--text-primary)] text-sm">{item.carouseTeamPost}</p>
 
                             </div>
 
