@@ -4,6 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+
+
 /*=====================================
     BODY HTML CSS DECALARATIONS
 =====================================*/
@@ -31,6 +43,8 @@
 
   /* Roboto is the secondary font-family */
   --font-secondary: "Roboto", sans-serif;
+  
+ 
 
   /* Text colors */
   --text-primary: #333333;
@@ -41,6 +55,7 @@
 
 /* Light theme (default) */
 .light-theme {
+  
   
 }
 
@@ -57,6 +72,16 @@
 
 }
 
+.font-scheme2{
+  /* Fonts */
+  /* Overpass is the primary font-family */
+  --font-primary: "Montserrat", sans-serif;
+
+  /* Roboto is the secondary font-family */
+  --font-secondary: "Source Code Pro", sans-serif;
+}
+
+
 
 
 * {
@@ -71,6 +96,14 @@ html {
   transition: background-color 0.3s ease, color 0.3s ease;
 
 }
+
+
+body p, body li{
+  font-family: var(--font-secondary);
+
+}
+ 
+
 
 body h1,
 body h2,
@@ -197,8 +230,6 @@ img {
 }
 
 
-
-
 /* Base dark mode toggle button */
 .btn_dark {
   padding: 10px 15px;
@@ -212,6 +243,7 @@ img {
   line-height: 1;
   font-size: 1rem;
 }
+
 
 /* Light Theme Hover: white → black */
 .light-theme .btn_dark:hover {
@@ -238,8 +270,6 @@ img {
   .btn_dark {
     padding: 8px 12px;
   }
-
-
 }
 
 
