@@ -25,3 +25,4 @@ export const sendEmailUrl = baseUrl + 'website/sendEmail'
 
 // ----------------- 📋 Event API Routes -----------------
 export const addTemplateUrl = baseUrl + 'template/add'
+export const getAllTemplatesUrl = baseUrl + 'template/all'
